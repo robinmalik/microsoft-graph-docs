@@ -1,5 +1,5 @@
 ---
-title: "Configure custom security attributes using the Microsoft Graph API"
+title: "Assign, remove, and filter custom security attributes using the Microsoft Graph API"
 description: "Learn how to use the custom security attributes API in Microsoft Graph to configure custom security attributes for directory objects."
 author: "rolyon"
 ms.localizationpriority: medium
@@ -7,11 +7,13 @@ ms.prod: "directory-management"
 doc_type: conceptualPageType
 ---
 
-# Configure custom security attributes using the Microsoft Graph API
+# Assign, remove, and filter custom security attributes using the Microsoft Graph API
 
-The [custom security attributes API](../resources/custom-security-attributes-overview.md) in Microsoft Graph allows an organization to define and assign business-specific attributes to users and service principal objects. These attributes are assigned through the customSecurityAttribute property and can be used to store sensitive information, categorize objects, or enforce fine-grained access control over specific Azure AD resources.
+The [custom security attributes API](../resources/custom-security-attributes-overview.md) in Microsoft Graph allows an organization to define and assign business-specific attributes to users and service principal objects. These attributes are assigned through the **customSecurityAttributes** property and can be used to store sensitive information, categorize objects, or enforce fine-grained access control over specific Azure AD resources.
 
-The following article provides example requests for assigning different types of custom security attributes to users and service principals . Custom security attributes can be assigned or updated only through a **PATCH** operation in an [Update user]() or [Update servicePrincipal]() request.
+The following article provides examples for assigning different types of custom security attributes to users and service principals. Custom security attributes can be assigned or updated only through a **PATCH** operation in an [Update user]() or [Update servicePrincipal]() request.
+
+>**NOTE**: The calling user must also be in the appropriate [Azure AD roles](../resources/howto-customsecurityattributes.md) to define, assign, unassign, or retrieve custom security attributes.
 
 ## Assign custom security attributes to users or service principals
 
@@ -19,9 +21,9 @@ The following article provides example requests for assigning different types of
 
 In the following example, the custom security attribute has the following settings:
 
-+ The customSecurityAttributeDefinition object is named `ProjectDate`.
-+ It belongs to an attributeSet group named `Engineering`.
-+ It accepts only one value of String type.
++ The customSecurityAttributeDefinition object is named `ProjectDate`
++ It belongs to an attributeSet group named `Engineering`
++ It accepts only one value of String data type
 
 #### Request
 
@@ -50,9 +52,9 @@ Content-type: application/json
 
 In the following example, the custom security attribute has the following settings:
 
-+ The customSecurityAttributeDefinition object is named `Project`.
-+ It belongs to an attributeSet group named `Engineering`.
-+ It accepts a collection of values of String types.
++ The customSecurityAttributeDefinition object is named `Project`
++ It belongs to an attributeSet group named `Engineering`
++ It accepts a collection of values of String data types
 
 #### Request
 
@@ -77,13 +79,13 @@ Content-type: application/json
 }
 ```
 
-### Example 6: Assign a custom security attribute with an integer value to a user
+### Example 3: Assign a custom security attribute with an integer value to a user
 
 In the following example, the custom security attribute has the following settings:
 
-+ The customSecurityAttributeDefinition object is named `NumVendors`.
-+ It belongs to an attributeSet group named `Engineering`.
-+ It accepts only one value of Integer type.
++ The customSecurityAttributeDefinition object is named `NumVendors`
++ It belongs to an attributeSet group named `Engineering`
++ It accepts only one value of Integer data type
 
 #### Request
 
@@ -109,13 +111,13 @@ Content-type: application/json
 }
 ```
 
-### Example 7: Assign a custom security attribute with a collection of Integer values to a user
+### Example 4: Assign a custom security attribute with a collection of Integer values to a user
 
 In the following example, the custom security attribute has the following settings:
 
-+ The customSecurityAttributeDefinition object is named `CostCenter`.
-+ It belongs to an attributeSet group named `Engineering`.
-+ It accepts a collection of values of Integer types.
++ The customSecurityAttributeDefinition object is named `CostCenter`
++ It belongs to an attributeSet group named `Engineering`
++ It accepts a collection of values of Integer data types
 
 #### Request
 
@@ -141,13 +143,13 @@ Content-type: application/json
 }
 ```
 
-### Example 8: Assign a custom security attribute with a Boolean value to a user
+### Example 5: Assign a custom security attribute with a Boolean value to a user
 
 In the following example, the custom security attribute has the following settings:
 
-+ The customSecurityAttributeDefinition object is named `Certification`.
-+ It belongs to an attributeSet group named `Engineering`.
-+ It accepts only a Boolean type. Attributes that accept Boolean types can't be collections.
++ The customSecurityAttributeDefinition object is named `Certification`
++ It belongs to an attributeSet group named `Engineering`
++ It accepts only a Boolean data type. Attributes that accept Boolean types can't be collections
 
 #### Request
 
@@ -173,13 +175,13 @@ Content-type: application/json
 ```
 
 
-### Example 9: Update a custom security attribute with an integer value for a user
+### Example 6: Update a custom security attribute with an integer value for a user
 
 In the following example, the custom security attribute has the following settings:
 
-+ The customSecurityAttributeDefinition object is named `NumVendors`.
-+ It belongs to an attributeSet group named `Engineering`.
-+ It accepts only one value of Integer type.
++ The customSecurityAttributeDefinition object is named `NumVendors`
++ It belongs to an attributeSet group named `Engineering`
++ It accepts only one value of Integer data type
 
 #### Request
 
@@ -205,13 +207,13 @@ Content-type: application/json
 }
 ```
 
-### Example 10: Update a custom security attribute with a Boolean value for a user
+### Example 7: Update a custom security attribute with a Boolean value for a user
 
 In the following example, the custom security attribute has the following settings:
 
-+ The customSecurityAttributeDefinition object is named `Certification`.
-+ It belongs to an attributeSet group named `Engineering`.
-+ It accepts only a Boolean type. Attributes that accept Boolean types can't be collections.
++ The customSecurityAttributeDefinition object is named `Certification`
++ It belongs to an attributeSet group named `Engineering`
++ It accepts only a Boolean data type. Attributes that accept Boolean types can't be collections
 
 #### Request
 
@@ -240,12 +242,12 @@ Content-type: application/json
 
 The following examples illustrate how to remove custom security attributes from users and service principals. To remove a custom security attribute from an object, assign the customSecurityAttributeDefinition the value `null` (for single-valued types) or an empty collection (for collection types).
 
-### Example 11: Remove a single-valued custom security attribute assignment from a user
+### Example 8: Remove a single-valued custom security attribute assignment from a user
 
 In the following example, the custom security attribute to remove has the following settings:
 
-+ The customSecurityAttributeDefinition object is named `ProjectDate`.
-+ It belongs to an attributeSet group named `Engineering`.
++ The customSecurityAttributeDefinition object is named `ProjectDate`
++ It belongs to an attributeSet group named `Engineering`
 
 #### Request
 
@@ -271,12 +273,12 @@ Content-type: application/json
 ```
 
 
-### Example 12: Remove a multi-valued custom security attribute assignment from a user
+### Example 9: Remove a multi-valued custom security attribute assignment from a user
 
 In the following example, the custom security attribute to remove has the following settings:
 
-+ The customSecurityAttributeDefinition object is named `Project`.
-+ It belongs to an attributeSet group named `Engineering`.
++ The customSecurityAttributeDefinition object is named `Project`
++ It belongs to an attributeSet group named `Engineering`
 
 #### Request
 
@@ -301,7 +303,23 @@ Content-type: application/json
 }
 ```
 
+## Filter custom security attributes in user and servicePrincipal objects
+
+The **customSecurityAttributes** property of the user and servicePrincipal directory objects supports $filter with the following operators: `eq`, `startsWith`, `NOT`, and `ne`. The following examples illustrate the syntax for filter queries.
+
+### Example 10: $filter (eq) on a user object
+
+
+### Example 11: $filter (ne) on a service principal object
+
+
+### Example 12: $filter (NOT) on a service principal object
+
+
+### Example 13: $filter (startsWith) on a user object
+
+
 
 ## Next steps
 
-+ [Custom security attributes API]()
++ [Custom security attributes API](/graph/api/resources/customsecurityattributedefinition)
