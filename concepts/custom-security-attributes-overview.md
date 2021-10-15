@@ -27,8 +27,8 @@ The following are the building blocks of the custom security attributes API:
 
 Attribute sets are a collection of custom security attributes whose management can be delegated to other users. The following are the general characteristics of **attributeSet** objects:
 
-+ Attribute sets can't be deleted, but can be deactivated. There's no limit to the number of deactivated custom security attributeSet objects in a tenant.
 + Up to 100 attributeSet objects can be defined in the tenant.
++ Attribute set identifiers can be up to 32 characters long, include Unicode characters, and can't contain spaces or special characters. The identifiers cannot be updated.
 
 To configure attribute sets, use the [attributeSet](attributeset.md) resource type.
  
