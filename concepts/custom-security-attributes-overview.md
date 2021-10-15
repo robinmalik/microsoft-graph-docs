@@ -25,30 +25,37 @@ The following are the building blocks of the custom security attributes API:
 
 ### Attribute sets
 
-Attribute sets are a collection of custom security attributes whose management can be delegated to other users. The following are the general characteristics of attributeSet objects:
+Attribute sets are a collection of custom security attributes whose management can be delegated to other users. The following are the general characteristics of **attributeSet** objects:
 
-+ They can't be deleted, but can be deactivated. There's no limit to the number of deactivated custom security attributeSet objects in a tenant
-+ Up to 100 attributeSet objects can be defined in the tenant
++ Attribute sets can't be deleted, but can be deactivated. There's no limit to the number of deactivated custom security attributeSet objects in a tenant.
++ Up to 100 attributeSet objects can be defined in the tenant.
 
+To configure attribute sets, use the [attributeSet](attributeset.md) resource type.
  
 ### Custom security attribute definitions
 
-Custom security attribute definitions are a collection of key-value pairs that make up the schema of attribute sets. For example, the custom security attribute name, description, data type, and values. The following are the general characteristics of customSecurityAttributeDefinition objects:
+Custom security attribute definitions are a collection of key-value pairs that make up the schema of attribute sets. For example, the custom security attribute name, description, data type, and values. The following are the general characteristics of **customSecurityAttributeDefinition** objects:
 
-+ Up to 500 active customSecurityAttributeDefinition objects can be defined in an attributeSet
-+ They can't be deleted, but can be deactivated. There's no limit to the number of deactivated objects in a tenant
++ Up to 500 active customSecurityAttributeDefinition objects can be defined in an attributeSet.
++ The objects can't be deleted, but can be deactivated. There's no limit to the number of deactivated objects in a tenant.
+
+To configure custom security attribute definitions, use the [customSecurityAttributeDefinition](customsecurityattributedefinition.md) resource type.
 
 ### Allowed values
 
-Allowed values represent the values that are assignable to a customSecurityAttributeDefinition. The following are the general characteristics of allowedValue objects:
+Allowed values represent the values that are assignable to a **customSecurityAttributeDefinition**. The following are the general characteristics of **allowedValue** objects:
 
-+ Each customSecurityAttributeDefinition object can be assigned up to 50 active allowedValue objects
-+ They can't be deleted, but can be deactivated. There's no limit to the number of deactivated objects in a customSecurityAttributeDefinition
-+ Allowed values can be of Boolean, Integer, or String data types
-+ Allowed values can either be user-defined free-form values or predefined
++ Each customSecurityAttributeDefinition object can be assigned up to 50 active allowedValue objects.
++ Allowed values can't be deleted, but can be deactivated. There's no limit to the number of deactivated objects in a customSecurityAttributeDefinition.
++ Allowed values can be of Boolean, Integer, or String data types.
++ Allowed values can either be user-defined free-form values or predefined values.
 + Up to 100 predefined allowedValue objects can be added to a customSecurityAttributeDefinition object.
 
-Custom security attributes can be assigned only to [user](user.md) and [servicePrincipal](serviceprincipal.md) objects through the **customSecurityAttributes** property. Users synced from an on-premises Active Directory can also be assigned custom security attributes.
+To configure attribute sets, use the [allowedValue](allowedvalue.md) resource type.
+
+## Which directory objects support custom security attributes?
+
+Custom security attributes can be assigned to only [user](user.md) and [servicePrincipal](serviceprincipal.md) objects through the **customSecurityAttributes** property. Users synced from an on-premises Active Directory can also be assigned custom security attributes.
 
 ## License requirements
 
