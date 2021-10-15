@@ -12,7 +12,7 @@ doc_type: conceptualPageType
 > [!IMPORTANT]
 > The custom security attributes feature is currently in Preview. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-Custom security attributes in Azure Active Directory (Azure AD) are business-specific attributes that are defined as key-value pairs that can be assigned to Azure AD directory objects. These attributes can be used to store sensitive information, categorize objects, or enforce fine-grained access control over specific Azure AD resources through [Azure AD attribute-based access control (ABAC)]().
+Custom security attributes in Azure Active Directory (Azure AD) are business-specific attributes that can be assigned to Azure AD directory objects. These attributes can be used to store sensitive information, categorize objects, or enforce fine-grained access control over specific Azure AD resources. Custom security attributes are a feature of [Azure AD attribute-based access control (ABAC)]().
 
 Custom security attributes are configured using the [custom security attributes API](/graph/api/resources/customsecurityattributedefinition) in Microsoft Graph.
 
@@ -65,7 +65,7 @@ Using the custom security attributes API requires an Azure AD Premium P1 or P2 l
 
 To call the custom security attributes API, you must have the appropriate [custom security attributes permissions](/graph/permissions-reference#custom-security-attributes-permissions).
 
-The signed-in user must also be assigned one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference) specific to managing custom security attributes.
+The signed-in user must be in one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference) to manage custom security attributes.
 
 + [Attribute Definition Reader](/azure/active-directory/roles/permissions-reference#attribute-definition-reader)
 + [Attribute Definition Administrator](/azure/active-directory/roles/permissions-reference#attribute-definition-administrator)
