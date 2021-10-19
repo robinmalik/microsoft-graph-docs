@@ -41,7 +41,7 @@ Content-type: application/json
     {
         "Engineering":
         {
-            "@odata.type":"#Microsoft.DirectoryServices.CustomSecurityAttributeValue",
+            "@odata.type":"#microsoft.graph.CustomSecurityAttributeValue",
             "ProjectDate":"2022-10-01"
         }
     }
@@ -71,7 +71,7 @@ Content-type: application/json
     {
         "Engineering":
         {
-            "@odata.type":"#Microsoft.DirectoryServices.CustomSecurityAttributeValue",
+            "@odata.type":"#microsoft.graph.CustomSecurityAttributeValue",
             "Project@odata.type":"#Collection(String)",
             "Project":["Baker","Cascade"]
         }
@@ -103,7 +103,7 @@ Content-type: application/json
     {
         "Engineering":
         {
-            "@odata.type":"#Microsoft.DirectoryServices.CustomSecurityAttributeValue",
+            "@odata.type":"#microsoft.graph.CustomSecurityAttributeValue",
             "NumVendors@odata.type":"#Int32",
             "NumVendors":4
         }
@@ -135,7 +135,7 @@ Content-type: application/json
     {
         "Engineering":
         {
-            "@odata.type":"#Microsoft.DirectoryServices.CustomSecurityAttributeValue",
+            "@odata.type":"#microsoft.graph.CustomSecurityAttributeValue",
             "CostCenter@odata.type":"#Collection(Int32)",
             "CostCenter":[1001,1003]
         }
@@ -167,7 +167,7 @@ Content-type: application/json
     {
         "Engineering":
         {
-            "@odata.type":"#Microsoft.DirectoryServices.CustomSecurityAttributeValue",
+            "@odata.type":"#microsoft.graph.CustomSecurityAttributeValue",
             "Certification":true
         }
     }
@@ -199,7 +199,7 @@ Content-type: application/json
     {
         "Engineering":
         {
-            "@odata.type":"#Microsoft.DirectoryServices.CustomSecurityAttributeValue",
+            "@odata.type":"#microsoft.graph.CustomSecurityAttributeValue",
             "NumVendors@odata.type":"#Int32",
             "NumVendors":8
         }
@@ -231,7 +231,7 @@ Content-type: application/json
     {
         "Engineering":
         {
-            "@odata.type":"#Microsoft.DirectoryServices.CustomSecurityAttributeValue",
+            "@odata.type":"#microsoft.graph.CustomSecurityAttributeValue",
             "Certification":false
         }
     }
@@ -265,7 +265,7 @@ Content-type: application/json
     {
         "Engineering":
         {
-            "@odata.type":"#Microsoft.DirectoryServices.CustomSecurityAttributeValue",
+            "@odata.type":"#microsoft.graph.CustomSecurityAttributeValue",
             "ProjectDate":null
         }
     }
@@ -296,7 +296,7 @@ Content-type: application/json
     {
         "Engineering":
         {
-            "@odata.type":"#Microsoft.DirectoryServices.CustomSecurityAttributeValue",
+            "@odata.type":"#microsoft.graph.CustomSecurityAttributeValue",
             "Project":[]
         }
     }

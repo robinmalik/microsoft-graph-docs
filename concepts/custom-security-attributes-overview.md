@@ -17,9 +17,10 @@ Custom security attributes in Azure Active Directory (Azure AD) are business-spe
 Custom security attributes are configured using the [custom security attributes API](/graph/api/resources/customsecurityattributedefinition) in Microsoft Graph.
 
 The following are the building blocks of the custom security attributes API:
-+ Attribute sets—Represented by the [attributeSet](attributeset.md) resource type.
-+ Custom security attribute definitions—Represented by the [customSecurityAttributeDefinition](customsecurityattributedefinition.md) resource type.
-+ Allowed values—Represented by the [allowedValue](allowedvalue.md) resource type.
+
++ Attribute sets: Represented by the [attributeSet](attributeset.md) resource type.
++ Custom security attribute definitions: Represented by the [customSecurityAttributeDefinition](customsecurityattributedefinition.md) resource type.
++ Allowed values: Represented by the [allowedValue](allowedvalue.md) resource type.
 
 ## Key resource types in the custom security attributes API
 
@@ -56,6 +57,8 @@ To configure attribute sets, use the [allowedValue](allowedvalue.md) resource ty
 ## Which directory objects support custom security attributes?
 
 Custom security attributes can be assigned to only [user](user.md) and [servicePrincipal](serviceprincipal.md) objects through the **customSecurityAttributes** property. Users synced from an on-premises Active Directory can also be assigned custom security attributes.
+
+Each object can be assigned up to 50 custom security attribute values with the values distributed across single and multi-valued attributes. For example, 5 attributes with 10 values each or 50 attributes with 1 value each.
 
 ## License requirements
 
