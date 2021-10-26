@@ -1,6 +1,6 @@
 ---
 title: "templateAction resource type"
-description: "**TODO: Add Description**"
+description: "Represents an action that is part of a template."
 author: "idwilliams"
 ms.localizationpriority: medium
 ms.prod: "microsoft-365-lighthouse"
@@ -13,21 +13,21 @@ Namespace: microsoft.graph.managedTenants
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
+Represents an action that is part of a template.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|description|String|**TODO: Add Description**|
-|displayName|String|**TODO: Add Description**|
-|service|String|**TODO: Add Description**|
-|settings|[microsoft.graph.managedTenants.setting](../resources/managedtenants-setting.md) collection|**TODO: Add Description**|
-|templateActionId|String|**TODO: Add Description**|
+|description|String|The description for the template action. Optional. Read-only.|
+|displayName|String|The display name for the template action. Optional. Read-only.|
+|service|String|The workload associated with this template action. Optional. Read-only.|
+|settings|[microsoft.graph.managedTenants.setting](../resources/managedtenants-setting.md) collection|The collection of settings associated with the template action. Optional. Read-only.|
+|templateActionId|String|The unique identifier for the template action. Required. Read-only.|
 
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|licenses|[licenseDetails](../resources/managedtenants-licensedetails.md)|**TODO: Add Description**|
+|licenses|[licenseDetails](../resources/managedtenants-licensedetails.md)|Details for the license required for this template action.|
 
 ## JSON representation
 The following is a JSON representation of the resource.
@@ -50,4 +50,3 @@ The following is a JSON representation of the resource.
   ]
 }
 ```
-

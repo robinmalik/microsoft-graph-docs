@@ -18,9 +18,10 @@ Represents detailed information for the management template.
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|category|managementCategory|The management category for the management template. Possible values are: `custom`, `devices`, `identity`, `unknownFutureValue`. Required. Read-only.|
+|category|managementCategory|The management category for the management template. The possible values are: `custom`, `devices`, `identity`, `data`, `unknownFutureValue`. Required. Read-only.|
 |displayName|String|The display name for the management template. Required. Read-only.|
 |managementTemplateId|String|The unique identifier for the management template. Required. Read-only.|
+|version|Int32|The version for the management template.|
 
 ## Relationships
 None.
@@ -37,6 +38,7 @@ The following is a JSON representation of the resource.
   "@odata.type": "#microsoft.graph.managedTenants.managementTemplateDetailedInfo",
   "managementTemplateId": "String",
   "displayName": "String",
+  "version": "Integer",
   "category": "String"
 }
 ```

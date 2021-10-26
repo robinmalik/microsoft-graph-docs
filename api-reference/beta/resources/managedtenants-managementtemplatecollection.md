@@ -1,6 +1,6 @@
 ---
 title: "managementTemplateCollection resource type"
-description: "**TODO: Add Description**"
+description: "Represents a collection of management templates."
 author: "idwilliams"
 ms.localizationpriority: medium
 ms.prod: "microsoft-365-lighthouse"
@@ -13,33 +13,26 @@ Namespace: microsoft.graph.managedTenants
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
-
-
-Inherits from [entity](../resources/managedtenants-entity.md).
+Represents a collection of management templates.
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
 |[List managementTemplateCollections](../api/managedtenants-managementtemplatecollection-list.md)|[microsoft.graph.managedTenants.managementTemplateCollection](../resources/managedtenants-managementtemplatecollection.md) collection|Get a list of the [managementTemplateCollection](../resources/managedtenants-managementtemplatecollection.md) objects and their properties.|
-|[Create managementTemplateCollection](../api/managedtenants-managementtemplate-post-managementtemplatecollections.md)|[microsoft.graph.managedTenants.managementTemplateCollection](../resources/managedtenants-managementtemplatecollection.md)|Create a new [managementTemplateCollection](../resources/managedtenants-managementtemplatecollection.md) object.|
 |[Get managementTemplateCollection](../api/managedtenants-managementtemplatecollection-get.md)|[microsoft.graph.managedTenants.managementTemplateCollection](../resources/managedtenants-managementtemplatecollection.md)|Read the properties and relationships of a [managementTemplateCollection](../resources/managedtenants-managementtemplatecollection.md) object.|
-|[Update managementTemplateCollection](../api/managedtenants-managementtemplatecollection-update.md)|[microsoft.graph.managedTenants.managementTemplateCollection](../resources/managedtenants-managementtemplatecollection.md)|Update the properties of a [managementTemplateCollection](../resources/managedtenants-managementtemplatecollection.md) object.|
-|[Delete managementTemplateCollection](../api/managedtenants-managementtemplatecollection-delete.md)|None|Deletes a [managementTemplateCollection](../resources/managedtenants-managementtemplatecollection.md) object.|
 |[List managementTemplates](../api/managedtenants-managementtemplatecollection-list-managementtemplates.md)|[microsoft.graph.managedTenants.managementTemplate](../resources/managedtenants-managementtemplate.md) collection|Get the managementTemplate resources from the managementTemplates navigation property.|
-|[Add managementTemplate](../api/managedtenants-managementtemplatecollection-post-managementtemplates.md)|[microsoft.graph.managedTenants.managementTemplate](../resources/managedtenants-managementtemplate.md)|Add managementTemplates by posting to the managementTemplates collection.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|description|String|**TODO: Add Description**|
-|displayName|String|**TODO: Add Description**|
-|id|String|**TODO: Add Description**|
+|description|String|The description for the management template collection. Required. Optional.|
+|displayName|String|The display name for the management template collection. Required. Optional.|
+|id|String|The unique identifier for the management template collection. Required. Read-only.|
 
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|managementTemplates|[microsoft.graph.managedTenants.managementTemplate](../resources/managedtenants-managementtemplate.md) collection|**TODO: Add Description**|
+|managementTemplates|[microsoft.graph.managedTenants.managementTemplate](../resources/managedtenants-managementtemplate.md) collection|The management template associated with this management template collection. Required. Read-only.|
 
 ## JSON representation
 The following is a JSON representation of the resource.
@@ -59,4 +52,3 @@ The following is a JSON representation of the resource.
   "description": "String"
 }
 ```
-
