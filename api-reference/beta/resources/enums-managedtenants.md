@@ -1,7 +1,7 @@
 ---
 title: "Multi-tenant management enumeration values"
 description: "Microsoft Graph multi-tenant management enumeration values"
-author: "isaiahwilliams"
+author: "idwilliams"
 ms.localizationpriority: medium
 ms.prod: "microsoft-365-lighthouse"
 doc_type: enumTypes
@@ -39,6 +39,7 @@ doc_type: enumTypes
 |custom|
 |devices|
 |identity|
+|data|
 |unknownFutureValue|
 
 ### managementParameterValueType values
@@ -53,6 +54,31 @@ doc_type: enumTypes
 |integerCollection|
 |booleanCollection|
 |guidCollection|
+|unknownFutureValue|
+
+### managementProvider values
+
+|Member|
+|:---|
+|microsoft|
+|community|
+|indirectProvider|
+|self|
+|unknownFutureValue|
+
+### managementTemplateDeploymentStatus values
+
+|Member|
+|:---|
+|toAddress|
+|completed|
+|error|
+|timeOut|
+|inProgress|
+|planned|
+|resolvedBy3rdParty|
+|resolvedThroughAlternateMitigation|
+|riskAccepted|
 |unknownFutureValue|
 
 ### tenantOnboardingStatus values

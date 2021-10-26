@@ -1,9 +1,9 @@
 ---
 title: "graphAPIErrorDetails resource type"
-description: "**TODO: Add Description**"
-author: "**TODO: Provide Github Name. See [topic-level metadata reference](https://msgo.azurewebsites.net/add/document/guidelines/metadata.html#topic-level-metadata)**"
+description: "Represents the error details for a Microsoft Graph that can occur with specific managed tenant operations."
+author: "idwilliams"
 ms.localizationpriority: medium
-ms.prod: "**TODO: Add MS prod. See [topic-level metadata reference](https://msgo.azurewebsites.net/add/document/guidelines/metadata.html#topic-level-metadata)**"
+ms.prod: "microsoft-365-lighthouse"
 doc_type: resourcePageType
 ---
 
@@ -13,13 +13,13 @@ Namespace: microsoft.graph.managedTenants
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
+Represents the error details for a Microsoft Graph that can occur with specific managed tenant operations.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|code|String|**TODO: Add Description**|
-|message|String|**TODO: Add Description**|
+|code|String|The error code for the given error.|
+|message|String|The error message for the given error.|
 
 ## Relationships
 None.

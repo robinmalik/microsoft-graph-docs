@@ -1,9 +1,9 @@
 ---
 title: "managementAction resource type"
-description: "**TODO: Add Description**"
-author: "**TODO: Provide Github Name. See [topic-level metadata reference](https://msgo.azurewebsites.net/add/document/guidelines/metadata.html#topic-level-metadata)**"
+description: "Represents a management action that will be performed on behalf of a managed tenant."
+author: "idwilliams"
 ms.localizationpriority: medium
-ms.prod: "**TODO: Add MS prod. See [topic-level metadata reference](https://msgo.azurewebsites.net/add/document/guidelines/metadata.html#topic-level-metadata)**"
+ms.prod: "microsoft-365-lighthouse"
 doc_type: resourcePageType
 ---
 
@@ -13,31 +13,25 @@ Namespace: microsoft.graph.managedTenants
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
-
-
-Inherits from [entity](../resources/managedtenants-entity.md).
+Represents a management action that will be performed on behalf of a managed tenant.
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
 |[List managementActions](../api/managedtenants-managementaction-list.md)|[microsoft.graph.managedTenants.managementAction](../resources/managedtenants-managementaction.md) collection|Get a list of the [managementAction](../resources/managedtenants-managementaction.md) objects and their properties.|
-|[Create managementAction](../api/managedtenants-managedtenant-post-managementactions.md)|[microsoft.graph.managedTenants.managementAction](../resources/managedtenants-managementaction.md)|Create a new [managementAction](../resources/managedtenants-managementaction.md) object.|
 |[Get managementAction](../api/managedtenants-managementaction-get.md)|[microsoft.graph.managedTenants.managementAction](../resources/managedtenants-managementaction.md)|Read the properties and relationships of a [managementAction](../resources/managedtenants-managementaction.md) object.|
-|[Update managementAction](../api/managedtenants-managementaction-update.md)|[microsoft.graph.managedTenants.managementAction](../resources/managedtenants-managementaction.md)|Update the properties of a [managementAction](../resources/managedtenants-managementaction.md) object.|
-|[Delete managementAction](../api/managedtenants-managementaction-delete.md)|None|Deletes a [managementAction](../resources/managedtenants-managementaction.md) object.|
-|[apply](../api/managedtenants-managementaction-apply.md)|[microsoft.graph.managedTenants.managementActionDeploymentStatus](../resources/managedtenants-managementactiondeploymentstatus.md)|**TODO: Add Description**|
+|[apply](../api/managedtenants-managementaction-apply.md)|[microsoft.graph.managedTenants.managementActionDeploymentStatus](../resources/managedtenants-managementactiondeploymentstatus.md)|Applies the management action to a given managed tenant.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|category|managementCategory|**TODO: Add Description**. The possible values are: `custom`, `devices`, `identity`, `data`, `unknownFutureValue`.|
-|description|String|**TODO: Add Description**|
-|displayName|String|**TODO: Add Description**|
-|id|String|**TODO: Add Description** Inherited from [entity](../resources/managedtenants-entity.md).|
-|referenceTemplateId|String|**TODO: Add Description**|
-|referenceTemplateVersion|Int32|**TODO: Add Description**|
-|workloadActions|[microsoft.graph.managedTenants.workloadAction](../resources/managedtenants-workloadaction.md) collection|**TODO: Add Description**|
+|category|managementCategory|The type of category for this management action. The possible values are: `custom`, `devices`, `identity`, `data`, `unknownFutureValue`. Optional. Read-only.|
+|description|String|This description for this management action. Optional. Read-only.|
+|displayName|String|The display name for this management action. Optional. Read-only.|
+|id|String|The unique identifier for this management action. Required. Read-only.|
+|referenceTemplateId|String|The unique identifier for the reference management template. Required. Read-only.|
+|referenceTemplateVersion|Int32|The version of the reference management template. Required. Read-only.|
+|workloadActions|[microsoft.graph.managedTenants.workloadAction](../resources/managedtenants-workloadaction.md) collection|The collection of workload actions associated with the management action. Required. Read-only.|
 
 ## Relationships
 None.
@@ -68,4 +62,3 @@ The following is a JSON representation of the resource.
   ]
 }
 ```
-
