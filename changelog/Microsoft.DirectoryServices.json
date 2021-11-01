@@ -3,6 +3,42 @@
     {
       "ChangeList": [
         {
+          "Id": "b4e9af10-1cb2-4380-adc6-72cf4122f1b8",
+          "ApiChange": "Method",
+          "ChangedApiName": "excludes",
+          "ChangeType": "Deprecation",
+          "Description": "Deprecated Azure AD Graph in the [List excludes](https://docs.microsoft.com/en-us/graph/api/permissiongrantpolicy-list-excludes?view=graph-rest-beta) method of the [permissionGrantPolicy](https://docs.microsoft.com/graph/api/resources/permissiongrantpolicy?view=graph-rest-beta) resource type. After June 30, 2022, Azure AD Graph will no longer be supported in the **excludes** condition set. For more information about Azure AD Graph deprecation, see [Migrate Azure Active Directory (Azure AD) Graph apps to Microsoft Graph](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview).",
+          "Target": "excludes"
+        }        
+      ],
+      "Id": "b4e9af10-1cb2-4380-adc6-72cf4122f1b8",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2021-11-01T00:00:00.7458146Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Identity and sign-in"
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "3dc18de1-c639-4e70-8c70-a9decb6523c5",
+          "ApiChange": "Method",
+          "ChangedApiName": "excludes",
+          "ChangeType": "Deprecation",
+          "Description": "Deprecated Azure AD Graph in the [List excludes](https://docs.microsoft.com/en-us/graph/api/permissiongrantpolicy-list-excludes?view=graph-rest-1.0) method of the [permissionGrantPolicy](https://docs.microsoft.com/graph/api/resources/permissiongrantpolicy?view=graph-rest-1.0) resource type. After June 30, 2022, Azure AD Graph will no longer be supported in the **excludes** condition set. For more information about Azure AD Graph deprecation, see [Migrate Azure Active Directory (Azure AD) Graph apps to Microsoft Graph](https://docs.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview).",
+          "Target": "excludes"
+        }        
+      ],
+      "Id": "3dc18de1-c639-4e70-8c70-a9decb6523c5",
+      "Cloud": "Prod",
+      "Version": "v1.0",
+      "CreatedDateTime": "2021-11-01T00:00:00.7458146Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Identity and sign-in"
+    },
+    {
+      "ChangeList": [
+        {
           "Id": "cc9daa2b-0fbd-42b3-8bfb-b7593e031739",
           "ApiChange": "Method",
           "ChangedApiName": "validatePassword",
