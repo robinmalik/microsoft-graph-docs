@@ -123,7 +123,7 @@ Here is an example of the request.
   "blockType": "ignored",
   "name": "get_user_memberof_count_only"
 }-->
-```msgraph-interactive
+```http
 GET https://graph.microsoft.com/v1.0/users/{id}/memberOf/$count
 ConsistencyLevel: eventual
 ```
